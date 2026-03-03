@@ -1,0 +1,28 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Build output
+dist
+.vitepress/dist
+.vitepress/cache
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,337 @@
+/* Windows 11 风格主题 - 深色模式（默认） */
+:root {
+  /* Win11 深色配色 */
+  --vp-c-bg: #202020;
+  --vp-c-bg-alt: #2d2d2d;
+  --vp-c-bg-elv: #3a3a3a;
+  --vp-c-text-1: #ffffff;
+  --vp-c-text-2: #cccccc;
+  --vp-c-text-3: #9ca3af;
+  
+  /* Win11 蓝色强调色 */
+  --vp-c-brand-1: #0067c0;
+  --vp-c-brand-2: #0078d4;
+  --vp-c-brand-3: #005a9e;
+  
+  --vp-c-divider: #3a3a3a;
+  --vp-c-gutter: #2d2d2d;
+  --vp-nav-bg-color: rgba(32, 32, 32, 0.85);
+  --vp-nav-border: rgba(255, 255, 255, 0.06);
+  --vp-card-border: rgba(255, 255, 255, 0.06);
+  --vp-card-bg: rgba(45, 45, 45, 0.6);
+  --vp-card-bg-hover: rgba(58, 58, 58, 0.8);
+  
+  /* Win11 圆角 */
+  --win11-radius: 8px;
+  --win11-radius-lg: 12px;
+  --win11-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --win11-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Windows 11 风格主题 - 浅色模式 */
+:root.light-mode {
+  /* Win11 浅色配色 */
+  --vp-c-bg: #f3f3f3;
+  --vp-c-bg-alt: #ffffff;
+  --vp-c-bg-elv: #f9f9f9;
+  --vp-c-text-1: #1a1a1a;
+  --vp-c-text-2: #4a4a4a;
+  --vp-c-text-3: #6e6e6e;
+  
+  /* Win11 蓝色强调色 */
+  --vp-c-brand-1: #0078d4;
+  --vp-c-brand-2: #106ebe;
+  --vp-c-brand-3: #005a9e;
+  
+  --vp-c-divider: #e5e5e5;
+  --vp-c-gutter: #f0f0f0;
+  --vp-nav-bg-color: rgba(243, 243, 243, 0.9);
+  --vp-nav-border: rgba(0, 0, 0, 0.06);
+  --vp-card-border: rgba(0, 0, 0, 0.06);
+  --vp-card-bg: rgba(255, 255, 255, 0.8);
+  --vp-card-bg-hover: rgba(255, 255, 255, 0.95);
+  
+  /* Win11 阴影 - 浅色模式更柔和 */
+  --win11-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --win11-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Win11 导航栏样式 - 磨砂玻璃效果 */
+.VPNav {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: var(--vp-nav-bg-color) !important;
+  border-bottom: 1px solid var(--vp-nav-border);
+}
+
+.VPNavBarTitle {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* 首页样式 */
+.VPHome {
+  padding-top: 0 !important;
+}
+
+.VPHero {
+  padding: 80px 24px 40px !important;
+}
+
+.VPHero .name {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #0078d4, #0067c0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.VPHero .text {
+  font-size: 1.25rem !important;
+  color: var(--vp-c-text-2);
+}
+
+/* Win11 按钮样式 */
+.VPButton {
+  border-radius: var(--win11-radius) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+  box-shadow: var(--win11-shadow) !important;
+}
+
+.VPButton.medium.alt {
+  background: linear-gradient(135deg, var(--vp-c-brand-2), var(--vp-c-brand-1)) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.VPButton.medium.alt:hover {
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-3)) !important;
+  box-shadow: var(--win11-shadow-lg) !important;
+  transform: translateY(-1px);
+}
+
+/* 内容区域 */
+.VPContent {
+  background: var(--vp-c-bg);
+}
+
+/* 搜索框 */
+.VPLocalSearchBox {
+  --vp-local-search-bg: var(--vp-c-bg-alt);
+}
+
+/* 页脚 */
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-alt);
+}
+
+/* Win11 软件卡片样式 */
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.software-card {
+  background: var(--vp-card-bg);
+  border: 1px solid var(--vp-card-border);
+  border-radius: var(--win11-radius-lg);
+  padding: 20px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  box-shadow: var(--win11-shadow);
+}
+
+.software-card:hover {
+  background: var(--vp-card-bg-hover);
+  border-color: rgba(0, 120, 212, 0.3);
+  transform: translateY(-2px);
+  box-shadow: var(--win11-shadow-lg);
+}
+
+.software-card .header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.software-card .icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--win11-radius);
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 103, 192, 0.3);
+}
+
+.software-card .info {
+  flex: 1;
+}
+
+.software-card .title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--vp-c-text-1);
+  margin-bottom: 4px;
+}
+
+.software-card .version {
+  font-size: 0.75rem;
+  color: var(--vp-c-brand-2);
+  font-weight: 600;
+}
+
+.software-card .description {
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.software-card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.software-card .tag {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  background: var(--vp-c-gutter);
+  border-radius: 20px;
+  color: var(--vp-c-text-3);
+  border: 1px solid var(--vp-card-border);
+}
+
+.software-card .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.software-card .stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.75rem;
+  color: var(--vp-c-text-3);
+}
+
+.software-card .stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.software-card .download-btn {
+  padding: 8px 20px;
+  background: linear-gradient(135deg, var(--vp-c-brand-2), var(--vp-c-brand-1));
+  color: white;
+  border-radius: var(--win11-radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 103, 192, 0.3);
+}
+
+.software-card .download-btn:hover {
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-3));
+  box-shadow: 0 4px 12px rgba(0, 103, 192, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Win11 分类标签页 */
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--vp-card-border);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.category-tab {
+  padding: 8px 16px;
+  background: var(--vp-card-bg);
+  border: 1px solid var(--vp-card-border);
+  border-radius: var(--win11-radius);
+  color: var(--vp-c-text-2);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.category-tab:hover {
+  background: var(--vp-card-bg-hover);
+  border-color: rgba(0, 120, 212, 0.4);
+  color: var(--vp-c-text-1);
+}
+
+.category-tab.active {
+  background: linear-gradient(135deg, var(--vp-c-brand-2), var(--vp-c-brand-1));
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 103, 192, 0.3);
+}
+
+/* Win11 分类过滤器 */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-bar select {
+  padding: 8px 16px;
+  background: var(--vp-card-bg);
+  border: 1px solid var(--vp-card-border);
+  border-radius: var(--win11-radius);
+  color: var(--vp-c-text-1);
+  font-size: 0.875rem;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filter-bar select:hover {
+  background: var(--vp-card-bg-hover);
+  border-color: rgba(0, 120, 212, 0.3);
+}
+
+.filter-bar select:focus {
+  border-color: var(--vp-c-brand-1);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .software-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .VPHero .name {
+    font-size: 1.75rem !important;
+  }
+  
+  .category-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
