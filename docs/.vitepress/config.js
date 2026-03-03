@@ -3,9 +3,8 @@ export default {
   title: '硬核笔迹',
   description: '免费无广告实用软件下载站',
   
-  // GitHub Pages 配置
-  // 如果使用自定义域名，注释掉下面这行
-  // base: '/software-site/',
+  // GitHub Pages 配置 - 使用子路径
+  base: '/software-site/',
   
   // 启用干净URL
   cleanUrls: true,
